@@ -130,3 +130,7 @@ dmypy.json
 
 # Test images folder
 test_images/
+
+# Output folder contents
+output/*
+!output/.gitkeep
