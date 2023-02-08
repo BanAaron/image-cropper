@@ -1,2 +1,2 @@
 # pyImageCropper
-A simple program to bulk crop images automatically
+A simple python program to bulk crop images automatically
