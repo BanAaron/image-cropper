@@ -134,6 +134,3 @@ test_images/
 # Output folder contents
 output/*
 !output/.gitkeep
-
-# Requirements dump
-requirements.txt
