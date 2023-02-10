@@ -7,5 +7,5 @@ Pillow~=9.4.0
 ```
 
 # TODO
-1.  Get multiple images working at the same time
+1. get multiple images working at the same time
 2. create a real GUI with buttons and fields
