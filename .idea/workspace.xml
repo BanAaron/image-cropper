@@ -8,10 +8,11 @@
   </component>
   <component name="BlackConnectSettings" triggerOnEachSave="true" />
   <component name="ChangeListManager">
-    <list default="true" id="8319ba5f-5b05-446a-beba-411750ea1b34" name="Changes" comment="basic ui working">
+    <list default="true" id="8319ba5f-5b05-446a-beba-411750ea1b34" name="Changes" comment="cleaned up the code a little and added some logging">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Setup Script" />
         <option value="Python Script" />
+        <option value="Setup Script" />
       </list>
     </option>
   </component>
@@ -163,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676126596216</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cleaned up the code a little and added some logging">
+      <created>1676129935307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676129935307</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -186,6 +194,7 @@
     <MESSAGE value="commi" />
     <MESSAGE value="commit" />
     <MESSAGE value="basic ui working" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic ui working" />
+    <MESSAGE value="cleaned up the code a little and added some logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up the code a little and added some logging" />
   </component>
 </project>
