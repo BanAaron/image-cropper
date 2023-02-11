@@ -6,16 +6,23 @@ class PyImageCropper:
 
     def __init__(self):
         self.repr = "Main class for pyImageCropper"
+        self.logging.debug(f"initializing")
 
         # image processing logic
+        self.logging.debug(f"load:logic.ImageHandler")
         self.image_handler = self.logic.ImageHandler()
 
+        if self.image_handler.logging_flag:
+            self.logging.getLogger().setLevel(self.logging.DEBUG)
+
+        self.logging.debug(f"load:tkinter window")
         # create UI
         self.window = self.tk.Tk()
         self.window.title(self.__class__.__name__)
         self.window.wm_geometry("500x175")
         self.window.resizable(False, False)
 
+        self.logging.debug(f"load:tkinter buttons")
         # create ui buttons
         self.button_exit = self.tk.Button(text="Exit", command=self.button_exit_func)
         self.button_exit.place(x=450, y=135)
@@ -28,13 +35,14 @@ class PyImageCropper:
         self.button_crop = self.tk.Button(text="Crop", command=self.button_crop_func)
         self.button_crop.place(x=60, y=10)
 
-        # TODO: get crop box once and store in a variable. Then allocate values from there
+        self.logging.debug(f"load:tkinter entries and labels")
         # crop box entries
+        self.crop_box_default_values = self.image_handler.get_crop_box()
         self.entry_box_offset = 50
 
         # left
         self.entry_left_string = self.tk.StringVar()
-        self.entry_left_string.set(self.image_handler.get_crop_box()[0])
+        self.entry_left_string.set(self.crop_box_default_values[0])
         self.entry_left_label = self.tk.Label(text="Left:")
         self.entry_left_label.place(x=10, y=50)
         self.entry_left = self.tk.Entry(textvariable=self.entry_left_string)
@@ -44,7 +52,7 @@ class PyImageCropper:
         )
         # top
         self.entry_top_string = self.tk.StringVar()
-        self.entry_top_string.set(self.image_handler.get_crop_box()[1])
+        self.entry_top_string.set(self.crop_box_default_values[1])
         self.entry_top_label = self.tk.Label(text="Top:")
         self.entry_top_label.place(x=10, y=75)
         self.entry_top = self.tk.Entry(textvariable=self.entry_top_string)
@@ -54,7 +62,7 @@ class PyImageCropper:
         )
         # right
         self.entry_right_string = self.tk.StringVar()
-        self.entry_right_string.set(self.image_handler.get_crop_box()[2])
+        self.entry_right_string.set(self.crop_box_default_values[2])
         self.entry_right_label = self.tk.Label(text="Right:")
         self.entry_right_label.place(x=10, y=100)
         self.entry_right = self.tk.Entry(textvariable=self.entry_right_string)
@@ -64,7 +72,7 @@ class PyImageCropper:
         )
         # bottom
         self.entry_bottom_string = self.tk.StringVar()
-        self.entry_bottom_string.set(self.image_handler.get_crop_box()[3])
+        self.entry_bottom_string.set(self.crop_box_default_values[3])
         self.entry_bottom_label = self.tk.Label(text="Bottom:")
         self.entry_bottom_label.place(x=10, y=125)
         self.entry_bottom = self.tk.Entry(textvariable=self.entry_bottom_string)
@@ -75,15 +83,15 @@ class PyImageCropper:
         )
 
         # start program loop
+        self.logging.debug(f"load:tkinter mainloop")
         self.window.mainloop()
 
-    def entry_update_values(self):
-        self.logging.debug(self.entry_top.info)
-
     def button_get_images_func(self):
+        self.logging.debug(f"button_get_images_func:called")
         self.image_handler.set_image_file_paths()
 
     def button_crop_func(self):
+        self.logging.debug(f"button_crop_func:called")
         self.image_handler.set_crop_box(
             (
                 int(self.entry_left_string.get()),
@@ -97,6 +105,7 @@ class PyImageCropper:
         )
 
     def button_exit_func(self):
+        self.logging.debug(f"button_exit_func:called")
         self.sys.exit()
 
 

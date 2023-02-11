@@ -12,7 +12,7 @@ class ImageHandler:
         self.pil_image = self.Image
 
         # sets the logging level to debug
-        self.logging_flag = True
+        self.logging_flag = False
         if self.logging_flag:
             self.logging.getLogger().setLevel(self.logging.DEBUG)
 
@@ -42,11 +42,13 @@ class ImageHandler:
         return self.image_file_paths
 
     def crop_images(self, image_file_path: str, crop_box: tuple[int, int, int, int]):
+        self.logging.debug(f"cropping images")
         for image_file in image_file_path:
             with self.pil_image.open(image_file) as im:
                 im = im.crop(crop_box)
                 base_name = self.os.path.basename(image_file)
                 im.save(f"output\\{base_name}")
+                self.logging.debug(f"saved to: output\\{base_name}")
 
 
 if __name__ == "__main__":
