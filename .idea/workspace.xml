@@ -8,9 +8,9 @@
   </component>
   <component name="BlackConnectSettings" triggerOnEachSave="true" />
   <component name="ChangeListManager">
-    <list default="true" id="1a93170f-aad2-4c48-b5d5-524278680210" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
+    <list default="true" id="1a93170f-aad2-4c48-b5d5-524278680210" name="Changes" comment="basic ui working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676118937947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="basic ui working">
+      <created>1676126596216</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676126596216</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -173,6 +180,7 @@
     <MESSAGE value="first working example" />
     <MESSAGE value="commi" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="basic ui working" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic ui working" />
   </component>
 </project>

@@ -1,14 +1,14 @@
 class ImageHandler:
+    import os
     import logging
     from PIL import Image
-    import os
     from tkinter import filedialog
 
     def __init__(self):
         self.repr = "Class to handle the logic of cropping images"
         self.image_file_paths = ""
         self.working_dir = self.os.getcwd()
-        self.crop_box = (0, 0, 100, 100)
+        self.crop_box = (960, 0, 2880, 1080)
         self.pil_image = self.Image
 
         # sets the logging level to debug
@@ -25,10 +25,6 @@ class ImageHandler:
 
     def set_crop_box(self, box: tuple[int, int, int, int]):
         self.logging.debug(f"set_crop_box: params: {box}")
-        for i in box:
-            if i < 0:
-                self.logging.error(f"crop box cannot be less than 0")
-                pass
         self.crop_box = box
         return self.crop_box
 
