@@ -37,19 +37,16 @@ class Cropper:
         self.crop_box = box
 
     def open_image(self):
-        image_file_path = self.filedialog.askopenfilename(initialdir=self.working_dir)
+        image_file_path = self.filedialog.askopenfilenames(initialdir=self.working_dir)
         self.logging.debug(f"image_file_path: {image_file_path}")
         return image_file_path
 
-    # TODO: get this working with multiple images at the same time
-    def open_images(self):
-        return self.filedialog.askopenfilenames(initialdir=self.working_dir)
-
     def crop_image(self, image_file_path: str, crop_box: tuple[int, int, int, int]):
-        with self.PIL.Image.open(image_file_path) as im:
-            im = im.crop(crop_box)
-            base_name = self.os.path.basename(image_file_path)
-            im.save(f"output\\{base_name}")
+        for image_file in image_file_path:
+            with self.PIL.Image.open(image_file) as im:
+                im = im.crop(crop_box)
+                base_name = self.os.path.basename(image_file)
+                im.save(f"output\\{base_name}")
 
 
 cropper = Cropper()
