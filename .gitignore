@@ -136,4 +136,4 @@ output/*
 !output/.gitkeep
 
 # .idea
-.idea/
+/.idea
