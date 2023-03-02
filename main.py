@@ -16,6 +16,7 @@ class PyImageCropper:
             self.logging.getLogger().setLevel(self.logging.DEBUG)
 
         self.logging.debug(f"load:tkinter window")
+
         # create UI
         self.window = self.tk.Tk()
         self.window.title(self.__class__.__name__)
