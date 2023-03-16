@@ -28,7 +28,7 @@ class PyImageCropper:
         self.button_exit.place(x=450, y=135)
 
         self.button_get_images = self.tk.Button(
-            text="Select", command=self.button_get_images_func
+            text="Select", command=lambda: self.button_get_images_func()
         )
         self.button_get_images.place(x=10, y=10)
 
