@@ -42,6 +42,7 @@ class ImageHandler:
         return self.image_file_paths
 
     # TODO: make output configurable
+    # TODO: make paths system agnostic
     def crop_images(self, image_file_path: str, crop_box: tuple[int, int, int, int]):
         self.logging.debug(f"cropping images")
         for image_file in image_file_path:
